@@ -1,0 +1,113 @@
+.forecasts {
+  list-style: none;
+  box-shadow: 0 1px 2px 0 rgba(147, 144, 144, 0.5);
+
+  &__item {
+    position: relative;
+
+    padding: 10px 15px;
+
+    border-bottom: 1px solid $gray-dark;
+    overflow: hidden;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__item-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid $gray;
+  }
+
+  &__item-author {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+
+    font-weight: 700;
+
+    span {
+      position: relative;
+
+      &::before {
+        content: '|';
+        padding-right: 10px;
+      }
+    }
+
+    img {
+      max-height: 14px;
+      margin-right: 10px;
+    }
+  }
+
+  &__item-roi {
+    margin-right: 10px;
+  }
+
+  &__item-bookmaker {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-height: 22px;
+      margin-right: 5px;
+    }
+
+    span {
+      padding: 0 15px;
+
+      font-size: 16px;
+
+      border: 2px solid $gray;
+      border-radius: 8px;
+    }
+  }
+
+  &__item-description {
+    padding: 5px 30px 0 0;
+    max-height: 66px;
+
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+
+  &__item-link {
+    position: absolute;
+    right: -10px;
+    bottom: 5px;
+
+    width: 30px;
+    height: 60px;
+
+    font-size: 0;
+
+    background-color: $gray;
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    transition: 300ms ease-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%) rotate(-135deg);
+
+      height: 6px;
+      width: 6px;
+
+      border-left: 2px solid $white;
+      border-bottom: 2px solid $white;
+    }
+
+    &:hover {
+      transform: translateX(-5px);
+    }
+  }
+}

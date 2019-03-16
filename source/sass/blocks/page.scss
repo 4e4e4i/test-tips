@@ -1,0 +1,24 @@
+.page {
+  padding-top: 80px;
+
+  &__predictions {
+    width: 800px;
+    margin: 0 auto 40px;
+  }
+
+  h1 {
+    font-size: $font-size-h1;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 840px) {
+    .page {
+      &__predictions {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 20px;
+      }
+    }
+  }
+}

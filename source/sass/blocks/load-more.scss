@@ -1,0 +1,56 @@
+.load-more {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 20px;
+
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 1px 2px 0 rgba(147, 144, 144, 0.5);
+  background-color: $gray;
+
+  &__handicap {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-weight: 700;
+    color: $gray-darker;
+  }
+
+  &__btn {
+    position: relative;
+
+    padding: 5px 30px 5px 15px;
+
+    text-transform: uppercase;
+    font-weight: 700;
+
+    border-radius: 15px;
+    background-color: $white;
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+
+    span {
+      color: $green;
+    }
+
+    ::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      transform: rotate(-45deg);
+
+      width: 7px;
+      height: 7px;
+
+      border-left: 2px solid $green;
+      border-bottom: 2px solid $green;
+    }
+  }
+}

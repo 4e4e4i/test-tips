@@ -1,0 +1,31 @@
+.progress-container {
+  position: relative;
+
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__value {
+    position: absolute;
+  }
+
+  &__background {
+    stroke: #e5eaf2;
+    stroke-width: 2;
+    fill: transparent;
+  }
+
+  &__circle {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+
+    stroke: green;
+    stroke-width: 2;
+    fill: transparent;
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 100;
+    stroke-linecap: round;
+  }
+}
